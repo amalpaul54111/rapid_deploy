@@ -8,7 +8,7 @@ on:
   pull_request:
 
 concurrency:
-  group: develop-rapid-deploy-${{ github.event.number }}
+  group: develop-rapid_deploy-${{ github.event.number }}
   cancel-in-progress: true
 
 jobs:
@@ -85,6 +85,6 @@ jobs:
         working-directory: /home/runner/frappe-bench
         run: |
           bench --site test_site set-config allow_tests true
-          bench --site test_site run-tests --app frappe_health_fhir
+          bench --site test_site run-tests --app rapid_deploy
         env:
           TYPE: server

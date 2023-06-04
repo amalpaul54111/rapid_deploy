@@ -3,5 +3,5 @@
 *.egg-info
 *.swp
 tags
-frappe_health_fhir/docs/current
+rapid_deploy/docs/current
 node_modules/

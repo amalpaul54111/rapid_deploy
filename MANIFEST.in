@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include rapid_deploy *.css
+recursive-include rapid_deploy *.csv
+recursive-include rapid_deploy *.html
+recursive-include rapid_deploy *.ico
+recursive-include rapid_deploy *.js
+recursive-include rapid_deploy *.json
+recursive-include rapid_deploy *.md
+recursive-include rapid_deploy *.png
+recursive-include rapid_deploy *.py
+recursive-include rapid_deploy *.svg
+recursive-include rapid_deploy *.txt
+recursive-exclude rapid_deploy *.pyc
