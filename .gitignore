@@ -1,0 +1,7 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+frappe_health_fhir/docs/current
+node_modules/
