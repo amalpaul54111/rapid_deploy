@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-05 00:12:43.478657",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "script",
+  "amended_from",
+  "host_group"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "script",
+   "fieldtype": "Link",
+   "label": "Script",
+   "options": "Scripts"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Deployment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "host_group",
+   "fieldtype": "Link",
+   "label": "Host Group",
+   "options": "Host Group"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-05 01:44:49.116451",
+ "modified_by": "Administrator",
+ "module": "Rapid Deploy",
+ "name": "Deployment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1,
+ "track_views": 1
+}
