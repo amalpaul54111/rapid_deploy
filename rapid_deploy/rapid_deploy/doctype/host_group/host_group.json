@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:group_name",
  "creation": "2023-06-05 01:44:33.087122",
  "default_view": "List",
  "doctype": "DocType",
@@ -22,15 +23,17 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Group Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-05 01:47:09.084285",
+ "modified": "2023-06-13 00:50:01.510715",
  "modified_by": "Administrator",
  "module": "Rapid Deploy",
  "name": "Host Group",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -46,6 +49,7 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

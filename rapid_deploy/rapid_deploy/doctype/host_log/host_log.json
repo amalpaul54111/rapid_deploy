@@ -1,54 +1,71 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{name1}",
- "creation": "2023-06-05 00:12:43.478657",
+ "creation": "2023-06-12 02:33:10.980654",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1",
-  "script",
-  "amended_from",
-  "host_group"
+  "success",
+  "deployment",
+  "host",
+  "output",
+  "errors",
+  "exit_code",
+  "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
+   "fieldname": "deployment",
+   "fieldtype": "Link",
+   "label": "Deployment",
+   "options": "Deployment"
   },
   {
-   "fieldname": "script",
+   "fieldname": "host",
    "fieldtype": "Link",
-   "label": "Script",
-   "options": "Script"
+   "label": "Host",
+   "options": "Host"
+  },
+  {
+   "fieldname": "output",
+   "fieldtype": "Data",
+   "label": "Output"
+  },
+  {
+   "default": "0",
+   "fieldname": "success",
+   "fieldtype": "Check",
+   "label": "Success"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Deployment",
+   "options": "Host Log",
    "print_hide": 1,
    "read_only": 1
   },
   {
-   "fieldname": "host_group",
-   "fieldtype": "Link",
-   "label": "Host Group",
-   "options": "Host Group"
+   "fieldname": "errors",
+   "fieldtype": "Data",
+   "label": "Errors"
+  },
+  {
+   "fieldname": "exit_code",
+   "fieldtype": "Data",
+   "label": "Exit code"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-13 00:49:50.280231",
+ "modified": "2023-06-12 02:33:58.654917",
  "modified_by": "Administrator",
  "module": "Rapid Deploy",
- "name": "Deployment",
- "naming_rule": "Expression",
+ "name": "Host Log",
  "owner": "Administrator",
  "permissions": [
   {
@@ -64,11 +81,8 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "name1",
- "track_seen": 1,
- "track_views": 1
+ "track_changes": 1
 }

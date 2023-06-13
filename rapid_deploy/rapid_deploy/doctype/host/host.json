@@ -9,13 +9,14 @@
  "engine": "InnoDB",
  "field_order": [
   "ip_address",
+  "username",
   "password",
   "ssh_port"
  ],
  "fields": [
   {
    "fieldname": "password",
-   "fieldtype": "Password",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Password",
    "reqd": 1
@@ -27,10 +28,15 @@
    "label": "SSH Port"
   },
   {
+   "default": "root",
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "label": "Username"
+  },
+  {
    "fieldname": "ip_address",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "IP Address",
+   "label": "IP/Domain",
    "no_copy": 1,
    "reqd": 1,
    "set_only_once": 1,
@@ -39,7 +45,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-04 23:53:33.591989",
+ "modified": "2023-06-12 02:17:05.450321",
  "modified_by": "Administrator",
  "module": "Rapid Deploy",
  "name": "Host",
@@ -62,5 +68,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
