@@ -2,7 +2,7 @@ import paramiko
 import threading
 import frappe
 
-def ssh_command(host, command, lock, log):
+def ssh_command(host, command, lock):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())    
 
@@ -20,29 +20,25 @@ def ssh_command(host, command, lock, log):
         exit_code = stdout.channel.recv_exit_status()
         
         with lock:
-            log.output = output
-            log.errors = errors
-            log.exit_code = exit_code
-            if exit_code == 0:
-                log.success = True
+            host['output'] = output
+            host['errors'] = errors
+            host['exit_code'] = exit_code
 
     finally:
         client.close()
 
 
-def run(hosts, command, deployment):
+def run(hosts, command):
 
     lock = threading.Lock()
     threads = []
     for host in hosts:
         print(f"Running command on {host['ip_address']} ")
-        # doc = frappe.get_doc({'doctype': 'Host Log', 'title': 'New Log'})
-        # doc.deployment = deployment
-        # doc.host = host
         t = threading.Thread(target=ssh_command, args=(host, command, lock))
         threads.append(t)
-        # doc.db_insert()
         t.start()
 
     for thread in threads:
         thread.join()
+
+    print("Deployment Completed")
