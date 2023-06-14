@@ -105,5 +105,5 @@ class Deployment(Document):
         command = f"bash -c '{script}'"
         frappe.enqueue(self.run, hosts=hosts, command=command, deployment=self.name)
 
-    def before_save(self):
-        self.before_submit()
+    # def before_save(self):
+    #     self.before_submit()
