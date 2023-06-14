@@ -13,18 +13,21 @@
   "output",
   "errors",
   "exit_code",
-  "amended_from"
+  "amended_from",
+  "datetime"
  ],
  "fields": [
   {
    "fieldname": "deployment",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Deployment",
    "options": "Deployment"
   },
   {
    "fieldname": "host",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Host",
    "options": "Host"
   },
@@ -37,6 +40,7 @@
    "default": "0",
    "fieldname": "success",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Success"
   },
   {
@@ -57,28 +61,29 @@
    "fieldname": "exit_code",
    "fieldtype": "Data",
    "label": "Exit code"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "label": "Date Time"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-06-12 02:33:58.654917",
+ "modified": "2023-06-14 20:41:01.136863",
  "modified_by": "Administrator",
  "module": "Rapid Deploy",
  "name": "Host Log",
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
+   "role": "All",
+   "share": 1
   }
  ],
  "sort_field": "modified",
