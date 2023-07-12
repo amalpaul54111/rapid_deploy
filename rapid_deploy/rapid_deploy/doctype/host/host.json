@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "hash",
+ "autoname": "field:ip_address",
  "creation": "2023-06-04 23:18:10.999153",
  "default_view": "List",
  "doctype": "DocType",
@@ -45,12 +45,12 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-12 02:17:05.450321",
+ "modified": "2023-07-12 21:57:29.608511",
  "modified_by": "Administrator",
  "module": "Rapid Deploy",
  "name": "Host",
  "name_case": "Title Case",
- "naming_rule": "Random",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
