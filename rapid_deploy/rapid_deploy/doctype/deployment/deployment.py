@@ -56,7 +56,9 @@ class Deployment(Document):
                 failure = failure + 1
         
         if failure == 0:
-            comment = f'Deployment Succeded<br>All the hosts succeded in the deployment'
+            comment = f'Deployment Succeded<br>All the hosts succeded in the deployment\n'
+            for host in hosts:
+                comment = comment + f'Host: {host["ip_address"]} <br>Output: <br><code>{host["output"]}</code><br><br>'
         elif success == 0 :
             comment = f'Deployment Failed<br>All the hosts exited with error <br><code>{hosts[1]["errors"]}</code>'
         else:

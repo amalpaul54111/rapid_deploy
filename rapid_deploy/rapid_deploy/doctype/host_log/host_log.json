@@ -33,7 +33,7 @@
   },
   {
    "fieldname": "output",
-   "fieldtype": "Data",
+   "fieldtype": "Long Text",
    "label": "Output"
   },
   {
@@ -70,7 +70,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-14 20:41:01.136863",
+ "modified": "2024-03-13 22:56:11.582919",
  "modified_by": "Administrator",
  "module": "Rapid Deploy",
  "name": "Host Log",
