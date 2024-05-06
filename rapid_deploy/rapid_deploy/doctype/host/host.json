@@ -3,7 +3,6 @@
  "allow_rename": 1,
  "autoname": "field:ip_address",
  "creation": "2023-06-04 23:18:10.999153",
- "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -39,18 +38,16 @@
    "label": "IP/Domain",
    "no_copy": 1,
    "reqd": 1,
-   "set_only_once": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-12 21:57:29.608511",
+ "modified": "2024-05-06 14:00:26.877571",
  "modified_by": "Administrator",
  "module": "Rapid Deploy",
  "name": "Host",
  "name_case": "Title Case",
- "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -68,6 +65,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
  "track_changes": 1
 }

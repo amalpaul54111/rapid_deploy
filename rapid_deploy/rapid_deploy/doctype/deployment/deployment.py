@@ -34,7 +34,6 @@ class Deployment(Document):
             client.close()
 
     def run(self, hosts, command, deployment):
-
         lock = threading.Lock()
         threads = []
         for host in hosts:
@@ -81,7 +80,7 @@ class Deployment(Document):
                 doc.deployment = deployment
                 if host['exit_code'] == 0:
                     doc.success = True
-                doc.host = host.ip_address
+                doc.host = host.name
                 doc.output = host['output']
                 doc.errors = host['errors']
                 doc.exit_code = host['exit_code']
@@ -105,7 +104,8 @@ class Deployment(Document):
 
         #add timeout for the run function with enqueue timeout
         command = f"bash -c '{script}'"
-        frappe.enqueue(self.run, hosts=hosts, command=command, deployment=self.name)
+        # frappe.enqueue(self.run, hosts=hosts, command=command, deployment=self.name)
+        self.run(hosts, command, self.name)
 
     # def before_save(self):
     #     self.before_submit()
